@@ -105,6 +105,26 @@ input:focus{border-color:var(--brass);outline:none}
 #veil .vault{--sz:min(72vw,330px)}
 #veilt{margin:0;font:italic 400 24px/1 var(--f-display);color:var(--ink)}
 
+/* startpagina: kluizenwand onder een lamp */
+.wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:-22px calc(-1 * max(16px,env(safe-area-inset-left,0px))) 6px;padding:34px max(16px,env(safe-area-inset-left,0px)) 12px;
+  background:radial-gradient(ellipse 75% 100% at 50% -12%,rgba(236,230,214,.15),rgba(236,230,214,.04) 55%,transparent 78%)}
+.safe{all:unset;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;text-align:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.safe .vslot{display:block;width:100%;position:relative;margin:0 0 10px}
+.safe .vslot::after{content:"";display:block;width:80%;height:12px;margin:2px auto 0;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.7),transparent)}
+.safe .vault{--sz:100%}
+.safe .sname{font:400 21px/1.1 var(--f-display);color:var(--ink)}
+.safe .ssub{font-size:12.5px;line-height:1.25;color:var(--mute)}
+.safe .sstate{margin-top:8px;padding:5px 10px;font-size:12.5px;font-weight:600;line-height:1;border:1px solid var(--line2);border-radius:2px;color:var(--mute)}
+.safe.now .sstate{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}
+.safe.done .sstate{color:var(--ok);border-color:rgba(134,181,146,.45)}
+.safe.locked .vslot{filter:brightness(.5)}
+.safe.now .wheel{transition:transform .5s}
+.safe.now:hover .wheel{transform:rotate(25deg)}
+.safe:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+#m0{min-height:1.5em;margin:6px 0 10px;text-align:center}
+#m0.info{color:var(--ink)}
+.tofin{text-align:center;margin:0 0 18px}
+.back{margin:0 0 14px}
 /* kluis 1 */
 #bar,#svbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface2);border:1px solid var(--line2);border-radius:3px;padding:10px 12px;margin:0 0 12px}
 #bar .row,#svbar .row{display:flex;align-items:center;gap:10px}
@@ -201,24 +221,27 @@ footer .wrap{padding-block:0 32px}
 <body>
 <header><div class="wrap">
   <div><div class="eyebrow">Locatie vergrendeld</div><h1>Mannenweekend 2027</h1></div>
-  <ol class="locks" aria-label="Voortgang">
-    <li id="l1"><em>dicht</em></li><li id="l2"><em>dicht</em></li><li id="l3"><em>dicht</em></li>
-  </ol>
 </div></header>
 <main class="wrap">
   <noscript><div class="card c" style="display:block"><h2>Open in je browser</h2><p>Deze pagina werkt niet in een voorvertoning. Open de link in Safari of Chrome.</p></div></noscript>
   <section id="s0">
-    <div class="vault-slot hero-slot"></div>
-    <div class="card c">
+    <div class="wall">
+      <button type="button" class="safe" data-k="1"><span class="vslot"></span><span class="sname">Kluis 1</span><span class="ssub">Wikipedia-route</span><span class="sstate"></span></button>
+      <button type="button" class="safe" data-k="2"><span class="vslot"></span><span class="sname">Kluis 2</span><span class="ssub">Controlevragen</span><span class="sstate"></span></button>
+      <button type="button" class="safe" data-k="3"><span class="vslot"></span><span class="sname">Kluis 3</span><span class="ssub">Street View</span><span class="sstate"></span></button>
+    </div>
+    <p class="msg" id="m0" role="status"></p>
+    <p class="tofin" id="tofinp" hidden><button type="button" id="tofin">Bekijk de locatie</button></p>
+    <div class="card">
       <span class="tag">Briefing</span>
       <h2>Drie kluizen, één adres</h2>
-      <p class="lead">De locatie van 2027 zit achter drie sloten. Kluis 1 is een puzzel, kluis 2 een paar vragen en kluis 3 kost je de meeste tijd.</p>
+      <p class="lead">De locatie van 2027 zit achter drie sloten. Tik op een kluis om te beginnen. Elke kluis gaat pas open als de vorige open is.</p>
       <p>AI helpt je hier niet.</p>
-      <button id="go">Start</button>
     </div>
   </section>
 
   <section id="s1">
+    <button type="button" class="ghost back">← Alle kluizen</button>
     <div class="card" id="k1intro">
       <span class="tag">Kluis 1</span>
       <h2>Wikipedia-route</h2>
@@ -237,6 +260,7 @@ footer .wrap{padding-block:0 32px}
   </section>
 
   <section id="s2">
+    <button type="button" class="ghost back">← Alle kluizen</button>
     <form class="card c" id="f2">
       <div class="vh" id="vh2"></div>
       <span class="tag">Kluis 2</span>
@@ -249,6 +273,7 @@ footer .wrap{padding-block:0 32px}
   </section>
 
   <section id="s3">
+    <button type="button" class="ghost back">← Alle kluizen</button>
     <div class="card c k3head">
       <span class="tag">Kluis 3</span>
       <h2>Street View</h2>
@@ -271,6 +296,7 @@ footer .wrap{padding-block:0 32px}
   </section>
 
   <section id="s4">
+    <button type="button" class="ghost back">← Alle kluizen</button>
     <div id="fin">
       <div class="fhero">
         <img id="fhero" alt="" referrerpolicy="no-referrer">
@@ -362,13 +388,35 @@ function unlock(n,cb){
   setTimeout(()=>v.classList.add('open'),2000);
   setTimeout(()=>{cb();$('veil').classList.remove('on');},3700);
 }
-for(let i=1;i<=3;i++)$('l'+i).prepend(vault(i));
-const hero=vault('');hero.classList.add('hero');document.querySelector('.hero-slot').appendChild(hero);
+if(!st.max)st.max=Math.min(4,Math.max(1,st.s||1));
+const safes=[...document.querySelectorAll('.safe')];
+safes.forEach(b=>b.querySelector('.vslot').appendChild(vault(b.dataset.k)));
+function renderWall(){
+  safes.forEach(b=>{const k=+b.dataset.k,s=k<st.max?'done':(k===st.max?'now':'locked');
+    b.className='safe '+s;b.querySelector('.vault').classList.toggle('open',s==='done');
+    b.querySelector('.sstate').textContent=s==='done'?'Open':(s==='now'?'Openen':'Op slot');
+    b.setAttribute('aria-label','Kluis '+k+', '+(s==='done'?'open':(s==='now'?'tik om te openen':'op slot')));});
+  $('tofinp').hidden=st.max<4;
+}
+function msg0(t){$('m0').className=t?'msg info':'msg';$('m0').textContent=t||'';}
+function advance(n){st.max=Math.max(st.max,n+1);save();show(n+1);}
+async function enter(k){
+  msg0('');
+  if(k===1){show(1);if(!path.length||done)startWiki();return;}
+  if(k===2){show(2);return;}
+  if(k===3){if(await loadK3())show(3);else msg0('De kluisinhoud ontbreekt.');}
+}
+safes.forEach(b=>b.onclick=()=>{const k=+b.dataset.k;
+  if(k===st.max){enter(k);return;}
+  if(k<st.max){msg0('Kluis '+k+' is al open.'+(st.max<4?' Ga verder met kluis '+st.max+'.':''));return;}
+  rattle(b.querySelector('.vault'));msg0('Open eerst kluis '+st.max+'.');});
+$('tofin').onclick=()=>show(4);
+document.querySelectorAll('.back').forEach(b=>b.onclick=()=>{msg0('');show(0);});
 const v2=vault(2),v3=vault(3);$('vh2').appendChild(v2);$('vh3').appendChild(v3);
 function show(n){
   st.s=n;save();
   for(let i=0;i<5;i++)$('s'+i).classList.toggle('on',i===n);
-  for(let i=1;i<=3;i++){const li=$('l'+i);li.className=n>i?'open':(n===i?'now':'');li.querySelector('em').textContent=n>i?'open':'dicht';li.querySelector('.vault').classList.toggle('open',n>i);}
+  renderWall();
   window.scrollTo(0,0);
 }
 function safeUrl(u){return typeof u==='string'&&/^https:\/\//.test(u)?u:'#';}
@@ -450,7 +498,7 @@ async function go(t){
   window.scrollTo(0,$('bar').offsetTop-4);
   if(p.title===TARGET){
     done=true;$('wiki').classList.add('done');
-    if(clicks===CLICKS)note('good','Je staat in '+TARGET+', in precies '+CLICKS+' klikken. Kluis 1 is open.','Open kluis 2',()=>unlock(1,()=>show(2)));
+    if(clicks===CLICKS)note('good','Je staat in '+TARGET+', in precies '+CLICKS+' klikken. Kluis 1 is open.','Open kluis 2',()=>unlock(1,()=>advance(1)));
     else note('bad','Je bent al na '+clicks+' '+(clicks===1?'klik':'klikken')+' in '+TARGET+'. Het moeten er precies '+CLICKS+' zijn.','Opnieuw proberen',startWiki);
   }else if(clicks>=CLICKS){
     done=true;$('wiki').classList.add('done');
@@ -460,7 +508,7 @@ async function go(t){
 $('wiki').addEventListener('click',e=>{const a=e.target.closest('a[data-t]');if(a){e.preventDefault();go(a.dataset.t);}});
 $('wiki').addEventListener('keydown',e=>{if(e.key==='Enter'){const a=e.target.closest('a[data-t]');if(a)go(a.dataset.t);}});
 $('reset').onclick=startWiki;
-if(location.hash==='#test'){const b=document.createElement('button');b.className='ghost';b.textContent='Test: sla over';b.onclick=()=>unlock(1,()=>show(2));$('reset').after(b);}
+if(location.hash==='#test'){const b=document.createElement('button');b.className='ghost';b.textContent='Test: sla over';b.onclick=()=>unlock(1,()=>advance(1));$('reset').after(b);}
 $('rs').textContent=START;$('rt').textContent=TARGET;$('rc').textContent=CLICKS;
 
 /* ---------- Kluis 2 ---------- */
@@ -503,7 +551,7 @@ $('svprev').onclick=()=>step((st.c||0)-1);
 $('svnext').onclick=()=>step((st.c||0)+1);
 async function openK3(){
   if(!(window.crypto&&crypto.subtle)){$('m2').textContent='Deze pagina werkt alleen via https.';return;}
-  if(await loadK3())unlock(2,()=>show(3));else $('m2').textContent='De kluisinhoud ontbreekt. Meld dit bij de organisatie.';
+  if(await loadK3())unlock(2,()=>advance(2));else $('m2').textContent='De kluisinhoud ontbreekt. Meld dit bij de organisatie.';
 }
 let lbList=[],lbI=0;
 function pic(u,w){return /^https:\/\//.test(u)?u.split('?')[0]+'?im_w='+w:'#';}
@@ -551,22 +599,17 @@ $('f3').addEventListener('submit',async e=>{
   $('b3').disabled=true;$('m3').textContent='';
   let ok=false;
   for(const c of candidates(v)){if(await tryFinal(c)){ok=true;break;}}
-  if(ok)unlock(3,()=>show(4));
+  if(ok)unlock(3,()=>advance(3));
   $('b3').disabled=false;
   if(!ok){$('m3').textContent='Fout. Het slot blijft dicht.';rattle(v3);}
 });
 
 /* ---------- Start ---------- */
-$('go').onclick=hero.onclick=()=>{if(!st.t0)st.t0=Date.now();show(1);startWiki();tick();};
 tick();
 $('wipe').onclick=()=>{try{localStorage.removeItem(KEY);}catch(e){}location.reload();};
 (async()=>{
-  if(st.s>=3&&await loadK3()){
-    if(st.s===4&&st.p3&&await tryFinal(st.p3)){show(4);return;}
-    show(3);return;
-  }
-  if(st.s===2){show(2);return;}
-  if(st.s===1){show(1);startWiki();return;}
+  if(st.max>=3)await loadK3();
+  if(st.max>=4&&st.p3&&k3)await tryFinal(st.p3);
   show(0);
 })();
 </script>
