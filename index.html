@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Mannenweekend 2027</title>
+<style>
+:root{--bg:#090b10;--panel:#12151c;--panel2:#1a1e27;--line:#2c3340;--brass:#c99a3f;--brass2:#f1d28a;--ink:#e8e3d6;--mute:#8d93a0;--red:#e2674f;--green:#7fc98a;--paper:#efe6cf}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
+ radial-gradient(ellipse at 50% -10%,rgba(201,154,63,.20),transparent 55%),
+ radial-gradient(ellipse at 50% 120%,rgba(30,60,80,.35),transparent 60%),
+ radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.75) 100%),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:-20% -60%;z-index:0;pointer-events:none;opacity:.5;background:
+ radial-gradient(closest-side at 25% 40%,rgba(150,170,190,.13),transparent),
+ radial-gradient(closest-side at 70% 65%,rgba(150,170,190,.10),transparent),
+ radial-gradient(closest-side at 50% 20%,rgba(201,154,63,.07),transparent);
+ filter:blur(30px);animation:fog 46s ease-in-out infinite alternate}
+@keyframes fog{from{transform:translateX(-12%)}to{transform:translateX(12%)}}
+header,main,footer{position:relative;z-index:1}
+h1,h2{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-transform:uppercase}
+.eyebrow,.tag{font-family:ui-monospace,Menlo,Consolas,monospace}
+header{padding:26px 16px 18px;text-align:center}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--brass)}
+header h1{margin:10px 0 16px;font-size:clamp(24px,6vw,38px);line-height:1.05;font-weight:800;letter-spacing:.1em;color:var(--brass2);text-shadow:0 0 28px rgba(201,154,63,.35)}
+.locks{display:flex;justify-content:center;gap:22px;list-style:none;margin:0;padding:0}
+.locks li{text-align:center;opacity:.55;transition:opacity .4s}
+.locks li.now,.locks li.open{opacity:1}
+.locks .vault{--sz:52px}
+.locks em{display:block;margin-top:5px;font:600 10px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;font-style:normal;color:var(--mute)}
+.locks li.now em{color:var(--brass2)}
+.locks li.open em{color:var(--green)}
+.locks li.now .vault{filter:drop-shadow(0 0 10px rgba(201,154,63,.6))}
+main{max-width:860px;margin:0 auto;padding:8px 14px 50px}
+section{display:none}
+section.on{display:block;animation:rise .6s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+.card{position:relative;background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-top-color:rgba(201,154,63,.55);border-radius:12px;padding:22px 18px;margin:0 0 16px;box-shadow:0 18px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.04)}
+.card.c{text-align:center}
+.tag{display:block;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);margin:0 0 6px}
+.card h2{margin:0 0 10px;font-size:20px;line-height:1.2;font-weight:800;letter-spacing:.08em;color:var(--brass2)}
+.card p{margin:0 0 12px}
+.lead{color:#cfc8b6}
+.rules{margin:0 0 4px;padding-left:20px}
+.rules li{margin:5px 0}
+button,.btn{display:inline-block;appearance:none;border:1px solid #6f5420;border-radius:8px;background:linear-gradient(#e2b85c,#b58530);color:#1c1406;font:700 15px/1 system-ui,sans-serif;letter-spacing:.04em;padding:14px 22px;cursor:pointer;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.35)}
+button:hover,.btn:hover{background:linear-gradient(#f3d286,#c99a3f)}
+button:focus-visible,.btn:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+button.ghost{background:transparent;color:var(--brass2);border:1px solid var(--line);padding:9px 12px;font-size:13px;box-shadow:none}
+button[disabled]{opacity:.5;cursor:wait}
+label{display:block;margin:16px 0 6px;font-weight:600;text-align:left}
+input{width:100%;padding:13px 12px;border-radius:8px;border:1px solid var(--line);background:#07090c;color:var(--ink);font:16px system-ui,sans-serif;box-shadow:inset 0 2px 6px rgba(0,0,0,.6)}
+input:focus{border-color:var(--brass)}
+.msg{min-height:1.5em;margin:12px 0;color:var(--red);font-weight:600}
+.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
+/* kluisdeur */
+.vault{position:relative;width:var(--sz,200px);aspect-ratio:1;margin:0 auto;perspective:900px}
+.vault svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.vault .glow{opacity:0;transition:opacity .9s .3s}
+.vault .door{transform-origin:5% 50%;transition:transform 1.4s cubic-bezier(.6,.05,.25,1);filter:drop-shadow(0 6px 14px rgba(0,0,0,.6))}
+.vault .wheel{transform-origin:0 0;transition:transform 1.6s cubic-bezier(.45,0,.15,1)}
+.vault.spin .wheel{transform:rotate(600deg)}
+.vault.open .door{transform:rotateY(-104deg)}
+.vault.open .glow{opacity:1}
+.vault.rattle .wheel{animation:rattle .55s}
+@keyframes rattle{20%{transform:rotate(-16deg)}45%{transform:rotate(13deg)}70%{transform:rotate(-7deg)}}
+.hero{--sz:min(64vw,270px);margin:6px auto 22px;cursor:pointer}
+.hero .wheel{animation:idle 7s ease-in-out infinite}
+@keyframes idle{50%{transform:rotate(22deg)}}
+.vh{--sz:130px;margin:0 auto 14px}
+#veil{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;background:radial-gradient(ellipse at center,rgba(20,22,28,.96),rgba(3,4,6,.99));opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+#veil.on{opacity:1;visibility:visible}
+#veil .vault{--sz:min(72vw,340px)}
+#veilt{margin:0;font:700 14px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--brass2)}
+/* kluis 1 */
+#bar{position:sticky;top:6px;z-index:5;background:rgba(18,21,28,.96);border:1px solid var(--line);border-top-color:rgba(201,154,63,.55);border-radius:10px;padding:10px 12px;margin:0 0 12px;box-shadow:0 8px 22px rgba(0,0,0,.6)}
+#bar .row{display:flex;align-items:center;gap:10px}
+#count{font:700 14px/1 ui-monospace,Menlo,Consolas,monospace;color:var(--brass2);white-space:nowrap}
+#pips{display:flex;gap:4px;flex:1}
+#pips i{flex:1;height:8px;border-radius:4px;background:#07090c;border:1px solid var(--line)}
+#pips i.on{background:var(--brass);border-color:var(--brass);box-shadow:0 0 8px rgba(201,154,63,.6)}
+#path{margin:8px 0 0;font-size:12.5px;color:var(--mute);overflow-wrap:anywhere}
+#path b{color:var(--ink)}
+#note{display:none;margin:0 0 12px;padding:14px 16px;border-radius:10px;font-weight:600}
+#note.bad{display:block;background:#33160f;border:1px solid var(--red)}
+#note.good{display:block;background:#14291a;border:1px solid var(--green)}
+#note button{margin-top:10px}
+#wiki{background:var(--paper);color:#1d1b16;border-radius:6px;padding:20px 16px;font:16px/1.6 Georgia,"Times New Roman",serif;overflow-wrap:break-word;overflow-x:auto;min-height:300px;box-shadow:0 18px 40px rgba(0,0,0,.6),inset 0 0 60px rgba(120,90,40,.18)}
+#wiki.busy{opacity:.45;pointer-events:none}
+#wiki.done a[data-t]{pointer-events:none;color:inherit;text-decoration:none}
+#wiki h1.t{margin:0 0 12px;font-size:28px;line-height:1.15;border-bottom:1px solid #c5b996;padding-bottom:8px}
+#wiki h2{font-family:Georgia,serif;font-size:22px;border-bottom:1px solid #c5b996;padding-bottom:4px;margin:26px 0 10px;clear:both}
+#wiki h3{font-size:18px;margin:20px 0 8px}
+#wiki a[data-t]{color:#0a4a9c;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+#wiki a.dood,#wiki a:not([href]):not([data-t]){color:inherit;text-decoration:none;cursor:default}
+#wiki img{max-width:100%;height:auto}
+#wiki table{max-width:100%;border-collapse:collapse;font:14px/1.4 system-ui,sans-serif;margin:8px 0}
+#wiki td,#wiki th{border:1px solid #cdc2a2;padding:4px 6px;vertical-align:top}
+#wiki .infobox,#wiki table.toccolours{float:right;width:300px;margin:0 0 12px 16px;background:#e6dcc0}
+#wiki figure,#wiki .thumb{float:right;clear:right;margin:4px 0 12px 16px;max-width:240px;font:13px/1.35 system-ui,sans-serif;color:#555}
+#wiki figure img{display:block}
+#wiki .mw-references-wrap,#wiki ol.references{font:13px/1.4 system-ui,sans-serif}
+#wiki sup{line-height:0}
+@media (max-width:640px){#wiki .infobox,#wiki table.toccolours,#wiki figure,#wiki .thumb{float:none;width:auto;max-width:100%;margin:10px 0}#wiki table{display:block;overflow-x:auto}}
+/* kluis 3 + finale */
+ol.clues{margin:0 0 16px;padding:0;list-style:none;counter-reset:c}
+ol.clues li{counter-increment:c;position:relative;padding:13px 14px 13px 54px;margin:0 0 8px;background:rgba(18,21,28,.9);border:1px solid var(--line);border-left:3px solid var(--brass);border-radius:8px}
+ol.clues li::before{content:counter(c);position:absolute;left:13px;top:12px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f1d28a,#a87a2a);color:#1c1406;font:700 14px/28px ui-monospace,monospace;font-style:normal;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.5)}
+#fin .place{font:700 11px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+#fin h2{font-size:clamp(22px,5.5vw,30px);margin:0 0 10px}
+#photos{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -14px 16px;padding:0 14px 8px}
+#photos img{flex:0 0 86%;max-width:560px;height:300px;object-fit:cover;border-radius:10px;scroll-snap-align:center;background:var(--panel2);border:1px solid var(--line)}
+ul.facts{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+ul.facts li{background:rgba(18,21,28,.9);border:1px solid var(--line);border-left:3px solid var(--brass);border-radius:6px;padding:10px 12px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+footer{text-align:center;padding:0 0 30px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Locatie vergrendeld</div>
+  <h1>Mannenweekend 2027</h1>
+  <ol class="locks" aria-label="Voortgang">
+    <li id="l1"><em>dicht</em></li><li id="l2"><em>dicht</em></li><li id="l3"><em>dicht</em></li>
+  </ol>
+</header>
+<main>
+  <noscript><div class="card c" style="display:block"><h2>Open in je browser</h2><p>Deze pagina werkt niet in een voorvertoning. Open de link in Safari of Chrome.</p></div></noscript>
+  <section id="s0">
+    <div class="vault-slot hero-slot"></div>
+    <div class="card c">
+      <span class="tag">Briefing</span>
+      <h2>Drie kluizen, één adres</h2>
+      <p class="lead">De locatie van 2027 zit achter drie sloten. Kluis 1 is een puzzel, kluis 2 een paar vragen en kluis 3 kost je de meeste tijd.</p>
+      <p>AI helpt je hier niet.</p>
+      <button id="go">Start</button>
+    </div>
+  </section>
+
+  <section id="s1">
+    <div class="card" id="k1intro">
+      <span class="tag">Kluis 1</span>
+      <h2>Wikipedia-route</h2>
+      <ul class="rules">
+        <li>Je start op de pagina <b id="rs"></b> en moet eindigen op <b id="rt"></b>.</li>
+        <li>Dat moet in <b>precies <span id="rc"></span> klikken</b> op links in de tekst. Niet meer, niet minder.</li>
+        <li>Elke pagina mag je maar één keer bezoeken.</li>
+      </ul>
+    </div>
+    <div id="bar">
+      <div class="row"><span id="count"></span><span id="pips"></span><button class="ghost" id="reset">Opnieuw</button></div>
+      <p id="path"></p>
+    </div>
+    <div id="note" role="status"></div>
+    <article id="wiki" aria-live="polite"></article>
+  </section>
+
+  <section id="s2">
+    <form class="card c" id="f2">
+      <div class="vh" id="vh2"></div>
+      <span class="tag">Kluis 2</span>
+      <h2>Controlevragen</h2>
+      <p class="lead">Drie vragen over eerdere weekenden.</p>
+      <div id="qs"></div>
+      <p class="msg" id="m2" role="alert"></p>
+      <button>Open kluis 2</button>
+    </form>
+  </section>
+
+  <section id="s3">
+    <div class="card c">
+      <span class="tag">Kluis 3</span>
+      <h2>Street View</h2>
+      <p class="lead" id="k3intro"></p>
+      <p><a class="btn" id="k3start" target="_blank" rel="noopener"></a></p>
+    </div>
+    <ol class="clues" id="clues"></ol>
+    <form class="card c" id="f3">
+      <div class="vh" id="vh3"></div>
+      <label for="a3" id="k3q"></label>
+      <input id="a3" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <p class="msg" id="m3" role="alert"></p>
+      <button id="b3">Open kluis 3</button>
+    </form>
+  </section>
+
+  <section id="s4">
+    <div id="fin">
+      <div class="card">
+        <span class="tag" id="ftag">Opgelost</span>
+        <div class="place" id="fplace"></div>
+        <h2 id="ftitle"></h2>
+        <p id="ftext"></p>
+      </div>
+      <div id="photos"></div>
+      <ul class="facts" id="facts"></ul>
+      <div class="acts"><a class="btn" id="flist" target="_blank" rel="noopener">Bekijk het huis op Airbnb</a><a class="btn" id="fmap" target="_blank" rel="noopener">Open op de kaart</a></div>
+    </div>
+  </section>
+</main>
+<div id="veil" aria-hidden="true"><div id="veilv"></div><p id="veilt"></p></div>
+<footer><button class="ghost" id="wipe">Helemaal opnieuw beginnen</button></footer>
+
+<script>
+/* ===== Instellingen ===== */
+const START='Nederland', TARGET='België', CLICKS=6;
+const QUESTIONS=['Waar was het allereerste mannenweekend?','Waar was het laatste mannenweekend?','Met hoeveel man gaan we dit jaar?'];
+/* Versleutelde inhoud van kluis 3 en de eindpagina. Maak je met maker.html. */
+const VAULT="7dxZbjPYTwjD/SZUmei+cvdp2NYnaDInA64FnF9m/TlGDSaXb97LUQuOGKk5iEiict/9QAPSmC03ENQ5z/lyd0oAnCfNTwaCEOMmGNym/tbjEFnc5P4Yn9RyLlLYk9RqS0qkrgG0So/l3Q1EPPKZuqRynBm5mi1JXyPKFK8ZTR2tuExvxbzdzlXgUdOM2sUqBIfIObbJlASyts9lDec3l5ycG8quegAkJM/nYrcidYk49rI5UaaKw22R/ubWA52X771UDOpU8XRGtZEDXw0vGswRiznszMgw5hhALCTn6Pz3xh0NCM3ebPzxGFA/cRJX8vw0qgTCE3/wWOyu6SFFin+l8gHHY/lyKpWtwVpBON82QcAOlTLkMg7cq7e+z4fxtUSih3tCBVpQ1qkuZ7vfIe3sQn9hfUkMIJJL2d7k5ArvFyrUiNCGygE7iLn92bO72c6MdzQYKkkDRQ7JZFyC1s5CqMT5vo5WsgIAXSapLaNfHdVE92u/8f6dXOZt0m8ALmLVC2aT2y8Sf06IatZtSKcUEN+c3zmF1hVSRkyx29rQfoqp3vkBt7tG69DEv+L7Eq1YLgWMse9ECbZQVLDTcMfP8WR7G+WRIUv5CrT96fezY6kfTxGjzDQR6sMJAUO0RX0zDwsUhj+OnOxJvbJcazQOyisUUbS7D2hRd8eDxVXCdpNSenZnbQjekMsBITGPqKrqulKAEFIbSwddof6D19Zy1UpM2aJkD1IyaXx2QpusnyTvXZjxbLCajJuGjbUZew5Cvck77DI8NQhIkrkZd21smXf8dga4N9yYmbbMs/BfBevmNXI5jXkMEEtHp3TFNStAnNTszltoC7YpyEramdZ9SOFRkEzyuEzUoZTZQSw2DyRMmzlYqB4p3cwHMjeDlnANtQs0mDBq3O4/MK5whknGRtdjfsuD50R/pbF+OCQo7J9dAWaTlS0oKipPAH4faMBO9fArO5fBKzGEhi1PkA3qC91Eg8al+YoHGLX+D5cRvvGf1MlsBJgwotzdgKy0a17abXQOqP1sz7RJIrDul4lSiyx2KO8UpIieBy+ooLoIO8YUIkPLBTCvfNCsrEn+zB1GrCXXtL8dbtViluUs2oMEOtnpLZlJu6Ps75kOYJvf5DsqAEMRTf0mvbCsV7ysEMyMmn3Dyu6p4XZl2+EHOemlFxX8sGNl1pThEsH0WNgDF+df3PaadCYpZ0VeZlXDde039ruP+eSAB0zsBadcJw8doRAmJEcMuy5G1qdrZSoGVciqU6MkWEfEUcE7S3srUMX51xXpvhcKwY6njaRtMpvay2qi+UP/kov4QSSWbGF4Uexg9Rlb0i9hctAWsg2EuN2RIW0xvlhJxxerL0OqNfqWK0KPwbP20i2UOEhCiY2jtWXkN9SdjupLgbN5Z4BbOzU8EvaKvzDv0A3dXKgq7qSvUvSkLVQSWIcjSstj1lJ2UhwLMmry8lhqaP53+GpaLezwu/R91dEKnYcJF7B/h6t1a7EBVBjaqr3gp3Cg3q6WF64sL0n0BXBviyrpp9r3xGOoqgUL/AcdYj5DS6SGAsGXxXk2XajLOFRUvAugTL/r157mFG/sWeygpjx0P66sNXYq4gCRyth4yXyav8jsKajLmbsLyV6GjMvSIV3R14/jfYAGhyuYgNQjOpj+KaJ2ZpUDgPkwyiFiZcam/j1hW2msOe9O6X9si1bzLm8Y9s1Xz0R4pFTy/WBHLd8e7s7SNHNqnpZg8m9GyxWEhuBgHuC9pAhL5cTkfiK07V1DuQyEIYUvQU0jpTMLnSrLxLNMtq9/qS+OoDSV7oqep227tbIXQu4EfDqiDyQaUAmxErX3g1KxW3lVQYAMm+N25FzXIbBiDUDWo5Uo2S4YxF56fWpaHrlIIlW5Z76vgoSVrXdcmmpgZhlhUah1XqH6t50xAZ3fhKPJeAcRjL4Glm0BWOGVZpaw6L9PJrg1/TU9BAf+KM+kqPP31pqi59wnazEdRG1NUbgNDLt+kTcPkdJGSLfMCM/HMpYgs8fqyO+D+AdulGxMXuCFYqvFk4fS8SxGWU++GHL4dhMS+aSiHlsGQlpIldEYSlMJwkwE1RaRK3EI4LNb4NU7RN+ImezLfZcwpoqjWtY16qucsaMIjGgYFCAu2gG9gLF0EhfRqoCS3fmG2y/yTpJMgJwr66HIUNWx1AGzFhh8OroN2gp2tta/kXjcKDHmVsbwvyt94sUI8Osi6WudeWs3VP2Ce192IjeWT9yxVd5gkMhWpM5KSXZz6SZgRcKOsRQnZ4rk+msg5nBqnCeG8c5hmFnPLdkXtrDwHabMh+zIHkQl9PwEPLoenO64Av2/TmnsQDbVyy6VYTG2giNX70Tlu+DJAyIV7GIBltRyNo+N39ukYPDJdTzNNlU0V5VbV63NEUldQ8iftrvqBvHgdMZymkVTG41t+kPgW6R8AGCr9UXH5caXPK7UXATdKWLDukgAOjnCTyo8JlFUyFrUWRXfVANeqSvHo5BsJd1ysIjU9hrtpxQCzgo5rFrXu5GWXPX5lp3ng/RDXd4oByDNscggQfkCbNlMjLkQXcEItU4Hoi5DAycUEKZtLEA2lqvoPVHptqjGC4owOIQI39AzdTdkdiRTVK+wyV+CjznWlw8kA6QbxoGzNfhCHTI+iYGHDHQVQ9KUN92nowphZjiwyNPn16++TITCJX8bL/adsGp0t1MI7qK/9u2MB9EVvTk8HQAGexYmtfv8YuawT5O/SASNhMQnqe6evFidGMoNbcbGnMyHIjrIJ2/xQtEwfAl9afBOJDXyhb/clsTHcJnq8I//gMmFe6Q7WhtD8P/NcClTh681h3cFhcDBY0YXsmtEffLrzbINiucFoa5sEe8wZYDTnzLXlIemCs43gYNQlNSUwSjvBPvL65OSnQiXpGWfmQV90k8p9a3JVyITJysS7AWgNwH/DPhaVxxKuYPYVX3o1Lr9tlPXtCwZ6/8vtvYtaWZ0JyBrSzPHQoemTOZXVlKjcwUgQe2O0/BjCKdyH5OwMJxMDRqaz3VgDHjPG4M+XVKVqKrlWVKNzXLUB7c3GzizHYbie3etyWdMdG9eF5bTKQCo6Vn27oP0uVs/G7gjq0nBwNz5QpeeASgDeCzS5xPPoIE3JIzzGCCXC//RXLd2tY5yIMRawReXCJDt9iYsoFArm6GkM4rS8eoEGCICpMXgWYI5CS3xPgKwP3sm1lh79qCM2rkwqv5e4H2ca9956jnRc+GeesVFAMLoQqD5HN6Qww7Oc2Ojx+SAnzv0ryw10pu3VjwkFmPBVAXO/kZkmCwRGJUgIopAPAdz2s9VPmDAN/uzqQqdp0D3XqDr1bAqxa4EhK+9h/7rsVjDIEQY2rWLHvyFQyXHba6E2gBAnLgIf25vxGQuCke8QTRFEEo//nwPtbZGexH4wG3InqH945PyoESbK9hu/Q6fmmnPt41sQvIGAVZX0oGEK6XxLX/WBqTKp9VhgtLb1gXB/fS2mLAWrhhxrkQn0jbEcLmDrVopDlfqjAL9y0jKM/UKb5gi++AUjBRgbvhyGktu6HjVQvcoeeDhZ2+cCkhYwmTSiYuc/OrpY9sfsXlMuUlTNZ3ZLnQxuFQvsVZBlh8IUGxkV+2g+gwr1gsVzln+R7XrbcmDmQvO42bSgW4AAR1C6oMMVWeNyKcBRkz9yoFLOwbwzqd9zf5vV6xIJdCiqX6DDLixTcNpbWBSykDREEK2L8/jHO5p1Xk5SIIx51pIgsORv8lKbRICOho9MVH2I8vePTZ1PY4WprSKO0pWepzDBYrPgRo/VVaulVcdW15KtYrHteuu/5qSqNhzavxG4xRWfBFrPmJPPuTpVRbx+ZoZ9FGUzM9wdLfhFQwvrqtXEdUKiA+TSTH8ZkcUt3+OwHpvYoQ87wWuHu3Ogekixwm/HcgpxtRCHhBg2GTDlZDa5Se38vbs3/YASQhKmNWNOtsFcVYOPg4DyGs9az/vtfpyldFRx+WPJGRc1+0I2Ei0EP0v8IGRTZxOTrgUdPJta3ry/Wdd5eMbjo863I/wTgn4lf75d4MZnyFY9mmsdQ7b8h132xs1k+gGQdJ8PlvmGd7fkMvWh4ioSplig9Z0EABZFBRgNNzOKFlBdKsXrPLQfPmTN5nBDujKh1PZMnJTwMAAZZOgXn3parjUOcaIdVSu2I0rFkiqtG5s1wBf4ErtMBrLkAYb5B5rTb2+5ncFepIf0e9fcH/dx3ObEFs8kVOHy79ICczYmS1zMyLdhBVRpc++LIHRH20h32EIb1Its/l+lDBl0UFHZtSTjQVqDUjqt2E+7G1ePSTI+m01BxXyBPdqhAOGKPlHlaPO+yV0cu1vjgoN3Uq0n2sN0wQeMyiIL/71BoAKgMsDVVhKYST1zcHIy6IoDr5DZyR7xnwvtB7m0I+ChU4qQALLZRuWQ7eSoNy+uJky4EcBklzAP00VvZ3ELC2vs8Nc98yqcE6FZBuCSvFnJj34Or1WmfOMjI3TFfb6rPdKiis3TpBmY2Q6OeRMK6iM606asFghfU2IHMSXVz+B12NN9bhxlZr8Ae0Wovaxq682RM4glDQVYESWLlWcwdnvBtBwuH4OlxHjDl6pxFh4SVGf2kR36RLgA5PUCAqOR439GEw27HnYTGjC2pNtFFovyvFBr1YmCIa7+rV4tx4TSW2q2pRNYN/E98dVd2b3MiObSrqXWQSCt0nj2MZuw4w2CBkNg7QBkjJP8FyC0Sn0752syUUQI18YDz1CA206KbAEVGG6p9DUfVMFygnnlsw0iHB4DZ72Q1H64ILd1xfSiTW6FkbAm54DcjaNP723vs2BaldSGc+Sef1gkCJjujR6lMsw52zhQRt3la+9B2Gql6oOOszcCSDeP6UynCnhqXDv4K3q3FBl14Ij4kttzsG9R42I/F1CkLCI+GSJ4HSpQlT+/b29Yk6vvk5+rJdheV8hll+URabgusxvYdCSHIeCJU6MqmqsIx3p8rK8Z9zg+HhSHjj08eAPKlDAc861U3PP9LU2lR44ZJKyWO2K3iDURa1n3tYwxB9GfdUKIm50Pe5Iv68zCj1/yQSYmoD+y+6Yq+yIm8/RFzOHecTIN/o417u4VtIafpZAAaIBeSsRu4avuSWS3LcK1TWMowfKeiKaPHZi3x6n/1QS9hFHl6TlIq9Yw41EnOd+NKSAyYdjeLy9LD8MNrI4ZKJEdzrDfwmcHlD3sL4jKfhqDHpL8F8YvnHKNx8rr+c7Ha/Otc6sWFSkTANyjljXM+jaOcHfQZuNaMT7IAFk1J+j9Sq6l9g7KBO1ppYcaBYbC296+S5b2ehHvoiuHPfbFTsedDo/2UwhAM2YYMk8RkXVmhZ0b0AaY+WpaaYDKyULXltwrLu+uQc7krwFvH8B2tl5BLEWyHB4m3IJlPavBux9YAm34XrUb062BBD8j3szdWz2ciUzAPiQclD01evuw1PP4mEE/awTEpt2oilufc2ff5yXNFskSPOcLtCfy5NHx2N3PziNJF3jOpqMbHIp+ZHWiCUkzM5owpxY6WXuwjk0J6K4EKtX9eQLZEZCgfLWs+conVPzWzSMUPMibT/RfjpDeiaenjGSYnI979lsMIDKNLJB/eX6YAA0gk5cnpKHbleE6qEAD4xmE63LaAy0QEBzTWD64RfOdWI8ZYwbHtC7GNYdO1MeEn3vvFyMj/GbDzknLP7EeL13AYTEVYhcj9L/6YH/cEQ7eDJhfhoXP7Il5EVc9SP3iTK8tTb+cugI8MRK";
+/* ======================== */
+const ITER=60000,OUTER='mannenweekend-kluis';
+const te=new TextEncoder(),td=new TextDecoder();
+function b64(b){let s='';for(let i=0;i<b.length;i++)s+=String.fromCharCode(b[i]);return btoa(s);}
+function unb64(s){const r=atob(s),b=new Uint8Array(r.length);for(let i=0;i<r.length;i++)b[i]=r.charCodeAt(i);return b;}
+async function keyFrom(pw,salt){const base=await crypto.subtle.importKey('raw',te.encode(pw),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:ITER,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);}
+async function seal(pw,text){const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));const k=await keyFrom(pw,salt);const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},k,te.encode(text)));const o=new Uint8Array(28+ct.length);o.set(salt);o.set(iv,16);o.set(ct,28);return b64(o);}
+async function unseal(pw,blob){try{const d=unb64(blob);const k=await keyFrom(pw,d.slice(0,16));return td.decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:d.slice(16,28)},k,d.slice(28)));}catch(e){return null;}}
+function norm(s){return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,'');}
+function candidates(s){const all=norm(s);const words=String(s).split(/[\s'’\-.,]+/).map(norm).filter(w=>w.length>1);return [...new Set([all,...words])].filter(Boolean).slice(0,6);}
+
+const $=id=>document.getElementById(id);
+const KEY='mw27';
+let st={s:0,p3:null,t0:0,t1:0};
+try{st=Object.assign(st,JSON.parse(localStorage.getItem(KEY)||'{}'));}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+let k3=null;
+function fmt(ms){const t=Math.max(0,Math.floor(ms/1000)),h=Math.floor(t/3600),m=Math.floor(t%3600/60),x=t%60;return (h?h+':':'')+String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+function tick(){}
+
+let vid=0;
+function vault(n){
+  const id='v'+(++vid);let riv='',ticks='',spokes='';
+  for(let i=0;i<16;i++){const a=i*Math.PI/8;riv+='<circle cx="'+(81*Math.cos(a)).toFixed(1)+'" cy="'+(81*Math.sin(a)).toFixed(1)+'" r="2.7" fill="url(#'+id+'b)"/>';}
+  for(let i=0;i<40;i++)ticks+='<line x1="0" y1="-74" x2="0" y2="'+(i%5?-70:-66)+'" transform="rotate('+i*9+')"/>';
+  for(let i=0;i<5;i++)spokes+='<g transform="rotate('+i*72+')"><rect x="-3.5" y="-52" width="7" height="44" rx="3" fill="url(#'+id+'b)"/><circle cx="0" cy="-56" r="6.5" fill="url(#'+id+'b)" stroke="#4a3613"/></g>';
+  const d=document.createElement('div');d.className='vault';
+  d.innerHTML='<svg viewBox="-100 -100 200 200" aria-hidden="true"><defs>'+
+   '<radialGradient id="'+id+'g"><stop offset="0" stop-color="#ffe3a0"/><stop offset=".5" stop-color="#b9792a" stop-opacity=".6"/><stop offset="1" stop-color="#050506"/></radialGradient>'+
+   '<linearGradient id="'+id+'f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#606a74"/><stop offset=".5" stop-color="#1f2428"/><stop offset="1" stop-color="#454e56"/></linearGradient></defs>'+
+   '<circle r="99" fill="url(#'+id+'f)"/><circle r="89" fill="#040405"/><circle class="glow" r="89" fill="url(#'+id+'g)"/>'+
+   '<rect x="-101" y="-50" width="13" height="24" rx="3" fill="#14181b"/><rect x="-101" y="26" width="13" height="24" rx="3" fill="#14181b"/></svg>'+
+   '<svg class="door" viewBox="-100 -100 200 200" aria-hidden="true"><defs>'+
+   '<linearGradient id="'+id+'d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a949d"/><stop offset=".35" stop-color="#3b434a"/><stop offset=".6" stop-color="#5d666e"/><stop offset="1" stop-color="#22272b"/></linearGradient>'+
+   '<linearGradient id="'+id+'b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc9a"/><stop offset=".5" stop-color="#c99a3f"/><stop offset="1" stop-color="#7d5a1c"/></linearGradient></defs>'+
+   '<circle r="88" fill="url(#'+id+'d)" stroke="#0a0c0e" stroke-width="2"/>'+riv+
+   '<g stroke="#c9d0d6" stroke-width="1" opacity=".5">'+ticks+'</g>'+
+   '<circle r="63" fill="none" stroke="#0c0f11" stroke-width="1.5" opacity=".6"/>'+
+   '<g class="wheel"><circle r="42" fill="none" stroke="url(#'+id+'b)" stroke-width="7"/>'+spokes+'</g>'+
+   '<circle r="15" fill="url(#'+id+'b)" stroke="#4a3613" stroke-width="1.5"/>'+
+   '<text y="6" text-anchor="middle" font-size="17" font-weight="700" fill="#2a1e08" font-family="Georgia,serif">'+n+'</text></svg>';
+  return d;
+}
+function rattle(v){v.classList.remove('rattle');void v.offsetWidth;v.classList.add('rattle');}
+function unlock(n,cb){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){cb();return;}
+  const v=vault(n);$('veilv').replaceChildren(v);$('veilt').textContent='Kluis '+n+' open';
+  $('veil').classList.add('on');
+  setTimeout(()=>v.classList.add('spin'),300);
+  setTimeout(()=>v.classList.add('open'),2000);
+  setTimeout(()=>{cb();$('veil').classList.remove('on');},3700);
+}
+for(let i=1;i<=3;i++)$('l'+i).prepend(vault(i));
+const hero=vault('?');hero.classList.add('hero');document.querySelector('.hero-slot').appendChild(hero);
+const v2=vault(2),v3=vault(3);$('vh2').appendChild(v2);$('vh3').appendChild(v3);
+function show(n){
+  st.s=n;save();
+  for(let i=0;i<5;i++)$('s'+i).classList.toggle('on',i===n);
+  for(let i=1;i<=3;i++){const li=$('l'+i);li.className=n>i?'open':(n===i?'now':'');li.querySelector('em').textContent=n>i?'open':'dicht';li.querySelector('.vault').classList.toggle('open',n>i);}
+  window.scrollTo(0,0);
+}
+function safeUrl(u){return typeof u==='string'&&/^https:\/\//.test(u)?u:'#';}
+function shake(el){el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');}
+
+/* ---------- Kluis 1 ---------- */
+const API='https://nl.wikipedia.org/w/api.php';
+const NS=['bestand','categorie','help','speciaal','wikipedia','portaal','sjabloon','overleg','gebruiker','file','category','special','media','mediawiki','module','image','afbeelding'];
+let clicks=0,path=[],busy=false,done=false;
+async function fetchPage(t){
+  let err;
+  try{
+    const r=await fetch(API+'?action=parse&format=json&formatversion=2&origin=*&redirects=1&prop=text&disableeditsection=1&disabletoc=1&page='+encodeURIComponent(t));
+    const j=await r.json();
+    if(j.error){const e=new Error(j.error.info||'fout');e.missing=true;throw e;}
+    return {title:j.parse.title,html:j.parse.text};
+  }catch(e){if(e.missing)throw e;err=e;}
+  try{
+    const r=await fetch('https://nl.wikipedia.org/api/rest_v1/page/html/'+encodeURIComponent(t.replace(/ /g,'_'))+'?redirect=true');
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const h=await r.text();
+    const d=new DOMParser().parseFromString(h,'text/html');
+    return {title:(d.title||t).replace(/_/g,' '),html:h};
+  }catch(e){throw new Error((err&&err.message||'')+' / '+e.message);}
+}
+function render(p){
+  const d=new DOMParser().parseFromString(p.html,'text/html');
+  d.querySelectorAll('script,style,link,meta,iframe,object,form,.mw-editsection').forEach(e=>e.remove());
+  d.querySelectorAll('*').forEach(e=>{for(const a of [...e.attributes])if(/^on/i.test(a.name))e.removeAttribute(a.name);});
+  d.querySelectorAll('img').forEach(i=>{const s=i.getAttribute('src')||'';if(s.startsWith('//'))i.setAttribute('src','https:'+s);i.removeAttribute('srcset');i.setAttribute('loading','lazy');});
+  d.querySelectorAll('a').forEach(a=>{
+    const h=a.getAttribute('href')||'';
+    if(h.startsWith('#'))return;
+    a.removeAttribute('href');a.removeAttribute('title');
+    const cut=h.startsWith('/wiki/')?6:(h.startsWith('./')?2:0);
+    if(cut){
+      let t;try{t=decodeURIComponent(h.slice(cut));}catch(e){t=h.slice(cut);}
+      t=t.split('?')[0];
+      t=t.split('#')[0].replace(/_/g,' ');
+      const ns=t.includes(':')?t.split(':')[0].toLowerCase():'';
+      if(t&&!NS.some(n=>ns===n||ns.startsWith(n+' '))){a.dataset.t=t;a.setAttribute('role','link');a.tabIndex=0;return;}
+    }
+    a.className='dood';
+  });
+  const w=$('wiki');
+  w.innerHTML='';
+  const h=document.createElement('h1');h.className='t';h.textContent=p.title;w.appendChild(h);
+  const box=document.createElement('div');box.innerHTML=d.body.innerHTML;w.appendChild(box);
+}
+function hud(){
+  $('count').textContent='Klik '+clicks+'/'+CLICKS;
+  const pp=$('pips');pp.innerHTML='';
+  for(let i=0;i<CLICKS;i++){const e=document.createElement('i');if(i<clicks)e.className='on';pp.appendChild(e);}
+  const pa=$('path');pa.innerHTML='';
+  path.forEach((t,i)=>{if(i)pa.appendChild(document.createTextNode(' → '));const e=document.createElement(i===path.length-1?'b':'span');e.textContent=t;pa.appendChild(e);});
+}
+function note(kind,text,btn,fn){
+  const n=$('note');n.className=kind||'';n.innerHTML='';
+  if(!kind)return;
+  const p=document.createElement('div');p.textContent=text;n.appendChild(p);
+  if(btn){const b=document.createElement('button');b.textContent=btn;b.onclick=fn;n.appendChild(b);}
+  $('bar').scrollIntoView({block:'start'});
+}
+async function startWiki(){
+  clicks=0;path=[START];done=false;busy=true;note('');hud();
+  $('wiki').className='busy';$('wiki').textContent='Laden…';
+  try{const p=await fetchPage(START);path=[p.title];render(p);hud();}
+  catch(e){$('wiki').textContent='Wikipedia is niet bereikbaar. Open deze pagina in een gewone browser (Chrome of Safari) met internet en klik op Opnieuw. Melding: '+e.message;}
+  $('wiki').className='';busy=false;
+}
+async function go(t){
+  if(busy||done)return;
+  busy=true;$('wiki').classList.add('busy');
+  let p;
+  try{p=await fetchPage(t);}catch(e){busy=false;$('wiki').classList.remove('busy');note('bad','Die pagina bestaat niet of laadt niet. Deze klik telt niet, kies een andere link.');return;}
+  busy=false;$('wiki').classList.remove('busy');
+  if(path.includes(p.title)){note('bad','Op “'+p.title+'” ben je al geweest. Deze klik telt niet, kies een andere link.');return;}
+  clicks++;path.push(p.title);render(p);hud();note('');
+  window.scrollTo(0,$('bar').offsetTop-4);
+  if(p.title===TARGET){
+    done=true;$('wiki').classList.add('done');
+    if(clicks===CLICKS)note('good','Je staat in '+TARGET+', in precies '+CLICKS+' klikken. Kluis 1 is open.','Open kluis 2',()=>unlock(1,()=>show(2)));
+    else note('bad','Je bent al na '+clicks+' '+(clicks===1?'klik':'klikken')+' in '+TARGET+'. Het moeten er precies '+CLICKS+' zijn.','Opnieuw proberen',startWiki);
+  }else if(clicks>=CLICKS){
+    done=true;$('wiki').classList.add('done');
+    note('bad','Je '+CLICKS+' klikken zijn op en je staat op “'+p.title+'”, niet in '+TARGET+'.','Opnieuw proberen',startWiki);
+  }
+}
+$('wiki').addEventListener('click',e=>{const a=e.target.closest('a[data-t]');if(a){e.preventDefault();go(a.dataset.t);}});
+$('wiki').addEventListener('keydown',e=>{if(e.key==='Enter'){const a=e.target.closest('a[data-t]');if(a)go(a.dataset.t);}});
+$('reset').onclick=startWiki;
+if(location.hash==='#test'){const b=document.createElement('button');b.className='ghost';b.textContent='Test: sla over';b.onclick=()=>unlock(1,()=>show(2));$('reset').after(b);}
+$('rs').textContent=START;$('rt').textContent=TARGET;$('rc').textContent=CLICKS;
+
+/* ---------- Kluis 2 ---------- */
+QUESTIONS.forEach((q,i)=>{
+  const l=document.createElement('label');l.htmlFor='q'+i;l.textContent='Vraag '+(i+1)+': '+q;
+  const inp=document.createElement('input');inp.id='q'+i;inp.autocomplete='off';
+  $('qs').append(l,inp);
+});
+$('f2').addEventListener('submit',e=>{
+  e.preventDefault();
+  for(let i=0;i<QUESTIONS.length;i++){
+    if(!$('q'+i).value.trim()){$('m2').textContent='Vul alle vragen in.';rattle(v2);$('q'+i).focus();return;}
+  }
+  $('m2').textContent='';openK3();
+});
+
+/* ---------- Kluis 3 ---------- */
+async function loadK3(){
+  if(k3)return true;
+  const t=await unseal(OUTER,VAULT);
+  if(!t)return false;
+  k3=JSON.parse(t);
+  $('k3intro').textContent=k3.intro||'';
+  $('k3start').textContent=k3.startLabel||'Open het startpunt';
+  $('k3start').href=safeUrl(k3.startUrl);
+  $('clues').innerHTML='';
+  (k3.clues||[]).forEach(c=>{const li=document.createElement('li');li.textContent=c;$('clues').appendChild(li);});
+  $('k3q').textContent=k3.question||'Wat is de code?';
+  return true;
+}
+async function openK3(){
+  if(!(window.crypto&&crypto.subtle)){$('m2').textContent='Deze pagina werkt alleen via https.';return;}
+  if(await loadK3())unlock(2,()=>show(3));else $('m2').textContent='De kluisinhoud ontbreekt. Meld dit bij de organisatie.';
+}
+async function tryFinal(pw){
+  const t=await unseal(OUTER+'|'+pw,k3.final);
+  if(!t)return false;
+  const f=JSON.parse(t);
+  $('fplace').textContent=f.place||'';$('ftitle').textContent=f.title||'';$('ftext').textContent=f.text||'';
+  $('photos').innerHTML='';
+  (f.photos||[]).forEach(u=>{if(safeUrl(u)==='#')return;const i=document.createElement('img');i.src=u;i.alt='Foto van het huis';i.loading='lazy';i.referrerPolicy='no-referrer';i.onerror=()=>i.remove();$('photos').appendChild(i);});
+  $('facts').innerHTML='';
+  (f.facts||[]).forEach(x=>{const li=document.createElement('li');li.textContent=x;$('facts').appendChild(li);});
+  $('flist').href=safeUrl(f.listingUrl);$('fmap').href=safeUrl(f.mapsUrl);
+  if(!f.listingUrl)$('flist').style.display='none';
+  if(!f.mapsUrl)$('fmap').style.display='none';
+  st.p3=pw;if(!st.t1)st.t1=Date.now();save();tick();return true;
+}
+$('f3').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const v=$('a3').value;if(!v.trim())return;
+  $('b3').disabled=true;$('m3').textContent='';
+  let ok=false;
+  for(const c of candidates(v)){if(await tryFinal(c)){ok=true;break;}}
+  if(ok)unlock(3,()=>show(4));
+  $('b3').disabled=false;
+  if(!ok){$('m3').textContent='Fout. Het slot blijft dicht.';rattle(v3);}
+});
+
+/* ---------- Start ---------- */
+$('go').onclick=hero.onclick=()=>{if(!st.t0)st.t0=Date.now();show(1);startWiki();tick();};
+tick();
+$('wipe').onclick=()=>{try{localStorage.removeItem(KEY);}catch(e){}location.reload();};
+(async()=>{
+  if(st.s>=3&&await loadK3()){
+    if(st.s===4&&st.p3&&await tryFinal(st.p3)){show(4);return;}
+    show(3);return;
+  }
+  if(st.s===2){show(2);return;}
+  if(st.s===1){show(1);startWiki();return;}
+  show(0);
+})();
+</script>
+</body>
+</html>
