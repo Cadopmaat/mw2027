@@ -8,14 +8,14 @@
 <title>Mannenweekend 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
 <style>
 /* Kluizenruimte: grafiet + geborsteld staal, mat messing alleen voor bediening en labels, links uitgelijnd, strakke hoeken. Eén donker uiterlijk, bewust. */
 :root{
   --bg:#0d0e0f;--surface:rgba(24,26,28,.88);--surface2:#22262a;--line:#33393e;--line2:#454c52;
   --ink:#e9e6df;--mute:#9a9fa2;--brass:#b8935a;--brass-hi:#cba873;--brass-ink:#16130d;
   --ok:#86b592;--bad:#d4664f;--paper:#f3f1ec;--paper-ink:#1f1d19;--paper-line:#d9d4c8;
-  --f-display:"IM Fell English",Georgia,"Times New Roman",serif;
+  --f-display:Cinzel,"Trajan Pro",Georgia,"Times New Roman",serif;
   --f-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Segoe UI",Arial,sans-serif;
   --f-mono:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Segoe UI",Arial,sans-serif;
   color-scheme:dark
@@ -24,7 +24,7 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-body);overflow-x:hidden;
   background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 3px)}
-h1,h2,h3{font-family:var(--f-display);font-weight:400;letter-spacing:0;line-height:1.08;text-wrap:balance;margin:0}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;letter-spacing:.01em;line-height:1.12;text-wrap:balance;margin:0}
 .wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 
 /* kop */
@@ -34,7 +34,7 @@ header,main,footer{position:relative;z-index:1}
 header{border-bottom:1px solid var(--line);background:rgba(13,14,15,.6)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .eyebrow{font:500 13px/1.2 var(--f-body);color:var(--mute)}
-header h1{margin-top:2px;font-size:clamp(26px,7vw,34px);color:var(--ink)}
+header h1{margin-top:4px;font-size:clamp(21px,5.8vw,28px);color:var(--ink)}
 .locks{display:flex;flex-shrink:0;gap:8px;list-style:none;margin:0;padding:0}
 .locks li{opacity:.4;transition:opacity .4s}
 .locks li.now,.locks li.open{opacity:1}
@@ -50,8 +50,8 @@ section.on{display:block;animation:rise .4s ease both}
 /* panelen */
 .card{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:20px 18px;margin:0 0 14px}
 .card.c{text-align:left}
-.tag{display:block;font:italic 400 18px/1.2 var(--f-display);color:var(--brass-hi);margin:0 0 6px}
-.card h2{font-size:clamp(32px,9vw,40px);margin:0 0 12px}
+.tag{display:block;font:600 14px/1.2 var(--f-body);color:var(--brass-hi);margin:0 0 8px}
+.card h2{font-size:clamp(25px,7.2vw,33px);margin:0 0 12px}
 .card p{margin:0 0 12px;max-width:62ch}
 .lead{color:#cfccc4}
 .rules{margin:0;padding-left:20px}
@@ -103,7 +103,7 @@ input:focus{border-color:var(--brass);outline:none}
 #veil{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;background:rgba(14,15,17,.97);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
 #veil.on{opacity:1;visibility:visible}
 #veil .vault{--sz:min(72vw,330px)}
-#veilt{margin:0;font:italic 400 24px/1 var(--f-display);color:var(--ink)}
+#veilt{margin:0;font:700 22px/1 var(--f-display);color:var(--ink)}
 
 /* startpagina: kluizenwand onder een lamp */
 .wall{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:-22px calc(-1 * max(16px,env(safe-area-inset-left,0px))) 6px;padding:34px max(16px,env(safe-area-inset-left,0px)) 12px;
@@ -112,7 +112,7 @@ input:focus{border-color:var(--brass);outline:none}
 .safe .vslot{display:block;width:100%;position:relative;margin:0 0 10px}
 .safe .vslot::after{content:"";display:block;width:80%;height:12px;margin:2px auto 0;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.7),transparent)}
 .safe .vault{--sz:100%}
-.safe .sname{font:400 21px/1.1 var(--f-display);color:var(--ink)}
+.safe .sname{font:700 17px/1.1 var(--f-display);color:var(--ink);white-space:nowrap}
 .safe .ssub{font-size:12.5px;line-height:1.25;color:var(--mute)}
 .safe .sstate{margin-top:8px;padding:5px 10px;font-size:12.5px;font-weight:600;line-height:1;border:1px solid var(--line2);border-radius:2px;color:var(--mute)}
 .safe.now .sstate{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}
@@ -169,7 +169,7 @@ ol.clues{margin:0 0 16px;padding-left:22px}
 
 /* eindpagina */
 #fin .place{font:500 15px/1.3 var(--f-body);color:#e4e0d8;margin:0 0 8px}
-#fin h2{font-size:clamp(38px,11vw,58px);line-height:1;color:#fff}
+#fin h2{font-size:clamp(29px,8.4vw,46px);line-height:1.1;color:#fff}
 .fhero{position:relative;margin:-22px calc(-1 * max(16px,env(safe-area-inset-left,0px))) 22px;height:clamp(340px,62vh,540px);overflow:hidden;background:var(--surface2)}
 @media (min-width:792px){.fhero{margin-left:0;margin-right:0;margin-top:0;border-radius:2px}}
 .fhero img{width:100%;height:100%;object-fit:cover;display:block}
@@ -183,7 +183,7 @@ ul.stats li:first-child{border-left:0}
 ul.stats b{display:block;font:600 clamp(28px,7.5vw,36px)/1 var(--f-body);letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums}
 ul.stats span{display:block;margin-top:6px;font:400 14px/1.2 var(--f-body);color:var(--mute)}
 @media (max-width:440px){ul.stats{grid-template-columns:repeat(2,1fr)}ul.stats li:nth-child(3){border-left:0}ul.stats li:nth-child(n+3){border-top:1px solid var(--line2)}}
-h3.gh{display:flex;align-items:baseline;gap:10px;margin:32px 0 12px;font-size:28px;color:var(--ink)}
+h3.gh{display:flex;align-items:baseline;gap:10px;margin:32px 0 12px;font-size:21px;color:var(--ink)}
 h3.gh::after{content:"";flex:1;height:1px;background:var(--line);align-self:center}
 h3.gh small{font:400 15px/1 var(--f-body);color:var(--mute);letter-spacing:0}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
